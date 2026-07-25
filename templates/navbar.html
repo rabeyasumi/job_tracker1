@@ -1,0 +1,33 @@
+<nav>
+
+    <div class="logo">
+
+        <a href="{% url 'home' %}">
+            Job Tracker
+        </a>
+
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'job_list' %}">
+                All Applications
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'job_create' %}">
+                Add Application
+            </a>
+        </li>
+
+    </ul>
+
+</nav>

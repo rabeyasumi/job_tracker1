@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title">
+
+Application Details
+
+</h1>
+
+<div class="detail-card">
+
+<p>
+
+<strong>Company :</strong>
+
+{{ job.company_name }}
+
+</p>
+
+<p>
+
+<strong>Position :</strong>
+
+{{ job.position }}
+
+</p>
+
+<p>
+
+<strong>Location :</strong>
+
+{{ job.job_location }}
+
+</p>
+
+<p>
+
+<strong>Salary :</strong>
+
+{{ job.salary }}
+
+</p>
+
+<p>
+
+<strong>Status :</strong>
+
+{{ job.status }}
+
+</p>
+
+<p>
+
+<strong>Application Date :</strong>
+
+{{ job.application_date }}
+
+</p>
+
+<p>
+
+<strong>Deadline :</strong>
+
+{{ job.deadline }}
+
+</p>
+
+<p>
+
+<strong>Notes :</strong>
+
+{{ job.notes }}
+
+</p>
+
+</div>
+
+<div class="buttons">
+
+<a href="{% url 'job_update' job.id %}" class="btn">
+
+Edit
+
+</a>
+
+<a href="{% url 'job_list' %}" class="btn">
+
+Back
+
+</a>
+
+</div>
+
+{% endblock %}

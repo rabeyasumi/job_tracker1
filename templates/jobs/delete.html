@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title">
+
+Delete Application
+
+</h1>
+
+<div class="delete-box">
+
+<p>
+
+Are you sure you want to delete
+
+<strong>
+
+{{ job.company_name }}
+
+</strong>
+
+?
+
+</p>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<button class="delete-btn">
+
+Yes, Delete
+
+</button>
+
+<a href="{% url 'job_list' %}" class="cancel-btn">
+
+Cancel
+
+</a>
+
+</form>
+
+</div>
+
+{% endblock %}
